@@ -1,0 +1,19 @@
+---
+version: "3.4"
+services:
+  git-server:
+    image: benoitj.ca/git-server
+    build: .
+    container_name: git-server
+    hostname: git.benlab.ca
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Montreal
+      - PUBKEY_FILE=/key.pub
+    volumes:
+      - ./config:/config
+      - ./key.pub:/key.pub
+    ports:
+      - "2222:22"
+    restart: unless-stopped

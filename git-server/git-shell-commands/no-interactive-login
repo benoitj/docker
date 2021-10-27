@@ -1,0 +1,8 @@
+#!/bin/sh
+
+echo "It works!"
+echo "Note that interactive shells are not supported"
+echo ""
+echo "The following commands are supported:"
+echo "list"
+echo "create <repo.git>"

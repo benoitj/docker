@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+
+printf "\nRepositories: \n"
+find * -type d -maxdepth 0 -name '*.git'
