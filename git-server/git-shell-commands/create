@@ -19,4 +19,4 @@ fi
 cd $REPOS &&
     mkdir -p "$repo" &&
     git init -q --bare --initial-branch=main "$repo" &&
-    printf "ssh://%s@%s:%d/%s/%s\n" "$USER" "$(hostname -f)" "${EXT_PORT}" "$REPOS" "$repo"
+    printf "ssh://%s@%s:%d%s/%s\n" "$USER" "$(hostname -f)" "${EXT_PORT}" "$REPOS" "$repo"
