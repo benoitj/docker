@@ -4,4 +4,7 @@
 set -e
 
 cd $REPOS
-find * -maxdepth 0 -type d -name '*.git' 2>/dev/null
+find * -maxdepth 0 -type d -name '*.git' 2>/dev/null | while read repo
+do
+    printf "ssh://%s@%s:%d/%s/%s\n" "$USER" "$(hostname -f)" "${EXT_PORT}" "$REPOS" "$repo"
+done
