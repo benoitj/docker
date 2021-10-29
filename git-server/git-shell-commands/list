@@ -1,6 +1,7 @@
 #!/bin/bash
+. ~/.bashrc
 
 set -e
 
-printf "\nRepositories: \n"
+cd $REPOS
 find * -type d -maxdepth 0 -name '*.git'

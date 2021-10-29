@@ -21,6 +21,7 @@ mkdir -p "${HOME}/.ssh"
 [ "$PUBKEY_FILE" ] && cat "$PUBKEY_FILE" > "${HOME}/.ssh/authorized_keys"
 
 [ "$EXT_PORT" ] && echo "export EXT_PORT='$EXT_PORT'" > "${HOME}/.bashrc"
+echo "export REPOS='/repos'" >> "${HOME}/.bashrc"
 
 chown -R git:git "${HOME}"
 chmod -R 755 "${HOME}"
