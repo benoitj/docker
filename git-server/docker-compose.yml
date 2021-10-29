@@ -12,7 +12,7 @@ services:
       - TZ=America/Montreal
       - PUBKEY_FILE=/key.pub
     volumes:
-      - ./mnt/appdata/barney/git:/repos
+      - /mnt/appdata/barney/git:/repos
       - ./key.pub:/key.pub
     ports:
       - "2222:22"
